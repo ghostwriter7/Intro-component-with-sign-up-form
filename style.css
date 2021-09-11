@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --accent-blue: hsl(248, 32%, 49%);
+  --neutral-dark-blue: hsl(249, 10%, 26%);
+  --neutral-grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-image: url("images/bg-intro-mobile.png");
+  background-repeat: repeat;
+  background-color: var(--primary-red);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ATTRIBUTION - FRONTEND MENTOR */
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+/* LEFT SIDE - HEADER AND PARAGRAPH - MOBILE */
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 90%;
+}
+
+header h1 {
+  margin-top: 2rem;
+}
+
+header h1,
+header p {
+  color: white;
+}
+
+/* RIGHT SIDE - FORM - MOBILE*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 2rem 0;
+}
+
+/* PURPLE BUTTON-LIKE HEADER */
+.header {
+  width: 100%;
+  margin: 2rem 0;
+  text-align: center;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.3);
+  background-color: var(--accent-blue);
+  color: white;
+}
+.header span {
+  font-weight: 700;
+}
+
+/* FORM CONTAINER */
+.body {
+  width: 100%;
+  background-color: white;
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* FORM-CONTROL DIV - POSITIONING ICONS AND ERROR MSG */
+.form-control {
+  position: relative;
+}
+
+/* SUCCESS CLASS */
+.form-control.success input {
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green);
+}
+.form-control.success input::placeholder {
+  color: var(--neutral-grayish-blue);
+}
+.form-control.success i.fa-check-circle {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  font-size: 1.3rem;
+  color: var(--primary-green);
+}
+
+/* ERROR CLASS */
+.form-control.error input {
+  border: 2px solid var(--primary-red);
+  color: var(--primary-red);
+}
+.form-control.error input::placeholder {
+  color: transparent;
+}
+.form-control.error i.fa-exclamation-circle {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  font-size: 1.3rem;
+  color: var(--primary-red);
+}
+.form-control.error small {
+  display: block;
+  color: var(--primary-red);
+  font-style: italic;
+  text-align: right;
+}
+
+.form-control i,
+.form-control small {
+  display: none;
+}
+
+/* INPUT FIELD */
+input {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--neutral-grayish-blue);
+  font-weight: 700;
+  color: var(--neutral-dark-blue);
+}
+
+input::placeholder {
+  font-weight: 700;
+}
+input:active,
+input:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+/* SUBMIT BUTTON */
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 0.25rem;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: var(--primary-green);
+  color: white;
+}
+
+/* FORM FOOTER */
+.footer {
+  font-size: 0.7rem;
+  max-width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--neutral-grayish-blue);
+}
+.footer a {
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: 700;
+}
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url("images/bg-intro-desktop.png");
+    flex-direction: row;
+  }
+
+  /* LEFT SIDE - HEADER & PARAGRAPH - DESKTOP*/
+  header {
+    width: 100%;
+    max-width: 550px;
+
+    margin: 1rem;
+    text-align: left;
+  }
+  header h1 {
+    font-size: 3rem;
+    line-height: 3.3rem;
+    margin-bottom: 2rem;
+  }
+
+  /* RIGHT SIDE - FORM - DESKTOP */
+  main {
+    width: 100%;
+    max-width: 550px;
+
+    margin: 1rem;
+  }
+
+  /* FORM CONTAINER - DESKTOP  */
+  .body {
+    padding: 3rem;
+  }
+  /* INPUT FIELD - DESKTOP */
+  input {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
